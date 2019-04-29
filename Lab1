@@ -1,0 +1,88 @@
+Installing collected packages: django
+  Found existing installation: Django 2.2
+    Uninstalling Django-2.2:
+      Successfully uninstalled Django-2.2
+Successfully installed django-2.1.7
+
+C:\Users\Nestie\PycharmProjects\lab1>django-admin.py startproject next1
+
+C:\Users\Nestie\PycharmProjects\lab1>python manage.py runserver
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+C:\Users\Nestie\PycharmProjects\lab1>dir
+ Том в устройстве C имеет метку Windows 10
+ Серийный номер тома: A6C5-DCB4
+
+ Содержимое папки C:\Users\Nestie\PycharmProjects\lab1
+
+22.04.2019  17:55    <DIR>          .
+22.04.2019  17:55    <DIR>          ..
+22.04.2019  17:55    <DIR>          .idea
+22.04.2019  17:55    <DIR>          next1
+               0 файлов              0 байт
+               4 папок  927 408 082 944 байт свободно
+
+C:\Users\Nestie\PycharmProjects\lab1>cd next1
+
+C:\Users\Nestie\PycharmProjects\lab1\next1>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 15 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 22, 2019 - 17:57:02
+Django version 2.1.7, using settings 'next1.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[22/Apr/2019 17:57:13] "GET / HTTP/1.1" 200 16348
+[22/Apr/2019 17:57:13] "GET / HTTP/1.1" 200 16348
+[22/Apr/2019 17:57:13] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[22/Apr/2019 17:57:14] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[22/Apr/2019 17:57:14] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[22/Apr/2019 17:57:14] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+Not Found: /favicon.ico
+[22/Apr/2019 17:57:14] "GET /favicon.ico HTTP/1.1" 404 1971
+
+C:\Users\Nestie\PycharmProjects\lab1\next1>python manage.py migration
+Unknown command: 'migration'. Did you mean showmigrations?
+Type 'manage.py help' for usage.
+
+C:\Users\Nestie\PycharmProjects\lab1\next1>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying sessions.0001_initial... OK
+
+C:\Users\Nestie\PycharmProjects\lab1\next1>python manage.py createsuperuser
+Username (leave blank to use 'nestie'): Anastasya
+Email address: anastasiatsey@gmail.com
+Password:
+Password (again):
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+C:\Users\Nestie\PycharmProjects\lab1\next1>python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 22, 2019 - 18:09:52
+Django version 2.1.7, using settings 'next1.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
